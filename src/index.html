@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>MellstroyApp</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <style>
+      .img-sound {
+        width: 100%;
+        height: auto;
+        max-height: 300px; /* Установите желаемую максимальную высоту */
+        object-fit: cover; /* Этот стиль обрежет изображение, чтобы оно соответствовало размерам */
+      }
+    </style>
+  </head>
+  <body class="bg-secondary">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a href="" class="navbar-brand">Logo</a>
+          <button class="navbar-toggler" type="button" 
+          data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav me-auto mb-2">
+
+            <li class="nav-item">
+              <a href="" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="" class="nav-link">Home</a>
+            </li>
+
+          </ul>
+        </div>
+        </div>
+      </nav>  
+      
+      <main>
+        <section class="row row-gap">
+
+          <div class="col-md-6">
+            <img src="./media/mell1.jpg" class="img-fluid img-sound"/>
+          </div>
+          <div class="col-md-6">
+            <img src="./media/mell2.jpg" class="img-fluid img-sound"/>
+          </div>
+
+          <div class="col-md-6">
+            <img src="./media/mell1.jpg" class="img-fluid img-sound"/>
+          </div>
+          <div class="col-md-6">
+            <img src="./media/mell2.jpg" class="img-fluid img-sound"/>
+          </div>
+
+        </section>
+      </main>
+    </div>
+
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const images = document.querySelectorAll('.img-sound');
+      const sounds = ['./media/mell1.mp3','./media/mell2.mp3'];
+      
+      images.forEach((image, index) => {
+        image.addEventListener('click', () => {
+          const audio = new Audio(sounds[index]);
+          audio.play();
+        });
+      });
+    </script>
+  </body>
+</html>
